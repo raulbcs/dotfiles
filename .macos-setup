@@ -1,0 +1,135 @@
+# macOS Setup Guide
+# References:
+# - https://macos-defaults.com/
+# - https://mac.install.guide/
+
+##### Pair Bluetooth Mouse
+# System Settings > Bluetooth
+
+##### Sign in with Apple Account
+# System Settings > Sign in
+
+##### Update macOS
+# System Settings > Software Update
+# - Update the system
+# - Turn off automatic/beta download and install (not recommended)
+sudo softwareupdate --install --all
+# Disable automatic update check and notification badge
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool false
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+
+##### Name the Mac
+# System Settings > General > Sharing
+scutil --set ComputerName "the-name"
+scutil --set HostName "the-name"
+scutil --set LocalHostName "the-name"
+
+##### Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+##### Dock
+# Remove all pinned apps from Dock
+defaults write com.apple.dock persistent-apps -array
+# Dock position: bottom
+defaults write com.apple.dock "orientation" -string "bottom"
+# Icon size: 16px (very small)
+defaults write com.apple.dock "tilesize" -int "16"
+# Auto-hide Dock
+defaults write com.apple.dock "autohide" -bool "true"
+# Auto-hide animation speed: instant
+defaults write com.apple.dock "autohide-time-modifier" -float "0"
+# Delay before showing Dock: near zero
+defaults write com.apple.dock "autohide-delay" -float "0.01"
+# Don't show recent apps in Dock
+defaults write com.apple.dock "show-recents" -bool "false"
+# Minimize effect: suck
+defaults write com.apple.dock "mineffect" -string "suck"
+
+##### Finder & Desktop
+# Show all file extensions
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
+# Show hidden files in Finder
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
+# Show status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool "true"
+# Show path bar in Finder
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+# Default Finder view: list
+defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv"
+# Folders first in Finder
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+# Folders first on Desktop
+defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true"
+# Show hard drives on Desktop
+defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "true"
+# Show mounted servers on Desktop
+defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
+# Reduce toolbar hover delay
+defaults write NSGlobalDomain "NSToolbarTitleViewRolloverDelay" -float "0"
+# Small sidebar size
+defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "1"
+
+##### Menu Bar / Clock
+# Flash date separators in clock
+defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool "true"
+# Clock format: Tue 24 Apr 20:30:00
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+# Full keyboard access: all controls (Tab navigates everything, not just inputs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int "2"
+
+##### Spaces & Time Machine
+# Spaces don't span across displays
+defaults write com.apple.spaces "spans-displays" -bool "false"
+# Feedback Assistant: don't auto-gather data
+defaults write com.apple.appleseed.FeedbackAssistant "Autogather" -bool "false"
+# Time Machine: don't offer new disks for backup
+defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "true"
+
+##### Screenshots
+# Create screenshots folder and save there instead of Desktop
+mkdir ~/Pictures/Screenshots
+defaults write com.apple.screencapture "location" -string "~/Pictures/Screenshots"
+
+##### Desktop & Dock (GUI)
+# System Settings > Desktop & Dock > Double-click a window's title bar to > Minimize
+defaults write -g NSMiniaturizeOnDoubleClick -bool true
+# System Settings > Desktop & Dock > Desktop & Stage Manager > Click wallpaper to reveal desktop > Only in Stage Manager
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
+# System Settings > Desktop & Dock > Widgets > Show Widgets > none (no direct CLI)
+
+##### Battery
+# System Settings > Battery > Low Power Mode > Never
+# (no direct CLI equivalent)
+
+##### Accessibility
+# System Settings > Accessibility > Reduce motion > ON
+defaults write com.apple.universalaccess reduceMotion -bool true
+# System Settings > Accessibility > Increase contrast > ON
+defaults write com.apple.universalaccess increaseContrast -bool true
+# System Settings > Accessibility > Differentiate without color > ON
+defaults write com.apple.universalaccess differentiateWithoutColor -bool true
+# System Settings > Accessibility > Auto-play animated images > OFF
+# (no direct CLI equivalent)
+
+##### Appearance
+# System Settings > Appearance > Allow wallpaper tinting in windows > OFF
+defaults write -g NSWindowDisableTransparentToolbar -bool false
+# System Settings > Appearance > Show scroll bars > Always
+defaults write -g AppleShowScrollBars -string "Always"
+
+##### Control Center
+# System Settings > Control Center > Wi-Fi > Show in Menu Bar
+# System Settings > Control Center > Bluetooth > Show in Menu Bar
+# System Settings > Control Center > Sound > Always Show in Menu Bar
+# System Settings > Control Center > Battery > Show in Menu Bar
+# System Settings > Control Center > Battery > Show Percentage
+# (Control Center items on macOS Ventura+ use complex preferences, easier via GUI)
+
+##### Fish shell
+# Add fish as valid shell and set as default
+sudo sh -c 'echo /opt/homebrew/bin/fish >> /etc/shells'
+chsh -s /opt/homebrew/bin/fish
+
+##### Oh My Fish
+# Install bobthefish theme
+omf install bobthefish
