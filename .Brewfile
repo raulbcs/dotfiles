@@ -92,6 +92,9 @@ cask "claude-code"
 cask "codexbar"
 cask "visual-studio-code"
 
+# Fonts
+cask "font-jetbrains-mono-nerd-font"
+
 # Terminal Emulators
 cask "ghostty"
 cask "iterm2"
