@@ -11,6 +11,7 @@ brew "git-filter-repo"
 
 # Dev - Languages & Runtimes
 brew "go"
+brew "llama.cpp"
 brew "node"
 brew "pnpm"
 brew "openjdk@17"
@@ -74,12 +75,17 @@ brew "yadm"
 cask "chromium"
 cask "firefox"
 cask "google-chrome"
+cask "librewolf"
 
 # Communication
 cask "discord"
 cask "microsoft-teams"
 cask "telegram"
 cask "whatsapp"
+
+# Music & File Sharing
+cask "soulseek"
+cask "spotify"
 
 # Productivity
 cask "bitwarden"
