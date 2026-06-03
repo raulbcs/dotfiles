@@ -1,0 +1,151 @@
+{
+  "providers" : [
+    {
+      "enabled" : false,
+      "id" : "codex"
+    },
+    {
+      "enabled" : false,
+      "id" : "claude"
+    },
+    {
+      "enabled" : false,
+      "id" : "cursor"
+    },
+    {
+      "enabled" : false,
+      "id" : "factory"
+    },
+    {
+      "enabled" : false,
+      "id" : "gemini"
+    },
+    {
+      "enabled" : false,
+      "id" : "antigravity"
+    },
+    {
+      "enabled" : true,
+      "id" : "zai",
+      "region" : "global",
+      "tokenAccounts" : {
+        "accounts" : [
+          {
+            "addedAt" : 1777086255.3630471,
+            "id" : "BC7CEFC7-D85E-4CFE-8871-9CC48707F543",
+            "label" : "zai coding plan",
+            "token" : ""
+          }
+        ],
+        "activeIndex" : 0,
+        "version" : 1
+      }
+    },
+    {
+      "apiKey" : "",
+      "enabled" : true,
+      "id" : "copilot"
+    },
+    {
+      "enabled" : false,
+      "id" : "minimax"
+    },
+    {
+      "enabled" : false,
+      "id" : "opencode"
+    },
+    {
+      "enabled" : false,
+      "id" : "kimi"
+    },
+    {
+      "enabled" : false,
+      "id" : "kiro"
+    },
+    {
+      "enabled" : false,
+      "id" : "vertexai"
+    },
+    {
+      "enabled" : false,
+      "id" : "augment"
+    },
+    {
+      "enabled" : false,
+      "id" : "jetbrains"
+    },
+    {
+      "enabled" : false,
+      "id" : "kimik2"
+    },
+    {
+      "enabled" : false,
+      "id" : "amp"
+    },
+    {
+      "enabled" : false,
+      "id" : "synthetic"
+    },
+    {
+      "enabled" : false,
+      "id" : "warp"
+    },
+    {
+      "enabled" : false,
+      "id" : "opencodego"
+    },
+    {
+      "enabled" : false,
+      "id" : "alibaba"
+    },
+    {
+      "enabled" : false,
+      "id" : "kilo"
+    },
+    {
+      "enabled" : false,
+      "id" : "ollama"
+    },
+    {
+      "enabled" : false,
+      "id" : "openrouter"
+    },
+    {
+      "enabled" : false,
+      "id" : "perplexity"
+    },
+    {
+      "enabled" : false,
+      "id" : "windsurf"
+    },
+    {
+      "enabled" : false,
+      "id" : "abacus"
+    },
+    {
+      "enabled" : false,
+      "id" : "mistral"
+    },
+    {
+      "enabled" : true,
+      "id" : "deepseek",
+      "tokenAccounts" : {
+        "accounts" : [
+          {
+            "addedAt" : 1778209014.8801,
+            "id" : "035A61C7-E582-4169-A371-E00652F885EE",
+            "label" : "deepseek",
+            "token" : ""
+          }
+        ],
+        "activeIndex" : 0,
+        "version" : 1
+      }
+    },
+    {
+      "enabled" : false,
+      "id" : "codebuff"
+    }
+  ],
+  "version" : 1
+}
