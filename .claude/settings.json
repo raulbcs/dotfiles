@@ -6,7 +6,11 @@
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5.1",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5.1",
     "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_ACCESSIBILITY": "1",
+    "CLAUDE_CODE_ALT_SCREEN_FULL_REPAINT": "1",
+    "CLAUDE_CODE_NO_FLICKER": "1",
+    "CLAUDE_CODE_REMOTE": false
   },
   "includeCoAuthoredBy": false,
   "permissions": {
@@ -25,7 +29,7 @@
   "prefersReducedMotion": true,
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
-  "autoScrollEnabled": false,
+  "autoScrollEnabled": true,
   "hideOnboarding": true,
   "showTurnDuration": true,
   "terminalProgressBarEnabled": true,
