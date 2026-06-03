@@ -8,19 +8,28 @@
     "API_TIMEOUT_MS": "3000000",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
   },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [],
     "defaultMode": "default"
   },
-  "autoScrollEnabled": false,
-  "effortLevel": "max",
-  "hideOnboarding": true,
-  "includeCoAuthoredBy": false,
-  "prefersReducedMotion": true,
-  "showThinkingSummaries": true,
-  "showTurnDuration": true,
+  "viewMode": "verbose",
   "skipWebFetchPreflight": true,
   "spinnerTipsEnabled": false,
+  "spinnerTipsOverride": {
+    "tips": [
+      ""
+    ],
+    "excludeDefault": true
+  },
+  "prefersReducedMotion": true,
+  "showThinkingSummaries": true,
+  "skipDangerousModePermissionPrompt": true,
+  "autoScrollEnabled": false,
+  "hideOnboarding": true,
+  "showTurnDuration": true,
   "terminalProgressBarEnabled": true,
-  "viewMode": "verbose"
+  "awaySummaryEnabled": true,
+  "feedbackSurveyRate": 0,
+  "defaultShell": "bash"
 }
