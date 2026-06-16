@@ -2,38 +2,44 @@
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "",
     "ANTHROPIC_BASE_URL": "https://api.z.ai/api/anthropic",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5-turbo",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5.1",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5.1",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-5-turbo[200k]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5[200k]",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5.1[200k]",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "glm-5.2[1m]",
     "API_TIMEOUT_MS": "3000000",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "CLAUDE_CODE_ACCESSIBILITY": "1",
     "CLAUDE_CODE_ALT_SCREEN_FULL_REPAINT": "1",
     "CLAUDE_CODE_NO_FLICKER": "1",
-    "CLAUDE_CODE_REMOTE": false
+    "CLAUDE_CODE_REMOTE": "false"
   },
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [],
     "defaultMode": "default"
   },
+  "model": "fable",
+  "defaultShell": "bash",
+  "enabledPlugins": {
+    "clangd-lsp@claude-plugins-official": true
+  },
   "viewMode": "verbose",
   "skipWebFetchPreflight": true,
+  "feedbackSurveyRate": 0,
   "spinnerTipsEnabled": false,
   "spinnerTipsOverride": {
+    "excludeDefault": true,
     "tips": [
       ""
-    ],
-    "excludeDefault": true
+    ]
   },
+  "effortLevel": "high",
+  "awaySummaryEnabled": true,
   "prefersReducedMotion": true,
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "autoScrollEnabled": true,
-  "hideOnboarding": true,
   "showTurnDuration": true,
   "terminalProgressBarEnabled": true,
-  "awaySummaryEnabled": true,
-  "feedbackSurveyRate": 0,
-  "defaultShell": "bash"
+  "hideOnboarding": true
 }
