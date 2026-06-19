@@ -1,6 +1,3 @@
-# Taps
-tap "steipete/tap"
-
 # Shell & Terminal
 brew "fish"
 brew "zellij"
@@ -23,7 +20,6 @@ brew "gcc"
 
 # Dev - Database
 cask "pgadmin4"
-cask "sqlitestudio"
 
 # Security & Networking
 brew "nmap"
@@ -43,9 +39,9 @@ cask "android-platform-tools"
 cask "android-studio"
 
 # Media
-brew "ffmpeg@7", link: true
+brew "ffmpeg"
+brew "mpv"
 brew "streamlink"
-cask "iina"
 cask "obs"
 cask "transmission"
 cask "vlc"
@@ -72,10 +68,8 @@ brew "watch"
 brew "yadm"
 
 # Browsers
-cask "chromium"
 cask "firefox"
 cask "google-chrome"
-cask "librewolf"
 
 # Communication
 cask "discord"
@@ -94,7 +88,7 @@ cask "obsidian"
 cask "sublime-text"
 
 # Dev Tools (GUI)
-cask "claude-code"
+cask "claude-code@latest"
 cask "codexbar"
 cask "visual-studio-code"
 
@@ -104,13 +98,11 @@ cask "font-jetbrains-mono-nerd-font"
 # Terminal Emulators
 cask "ghostty"
 cask "iterm2"
-cask "kitty"
 
 # System
 cask "basictex"
 cask "istat-menus"
 cask "orbstack"
-cask "rar"
 
 # VS Code Extensions
 vscode "anthropic.claude-code"
